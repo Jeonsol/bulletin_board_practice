@@ -1,0 +1,84 @@
+.blind {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  font-size: 0;
+  line-height: 0;
+  visibility: visible; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+h1 {
+  color: #ea7c54; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e8e8e8; }
+
+th {
+  text-align: left; }
+
+tr {
+  border-top: 1px solid #e8e8e8; }
+
+td {
+  color: #ea7c54;
+  font-size: 12px; }
+  td + td {
+    border-left: 1px solid #e8e8e8; }
+
+.new {
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 10px;
+  background-color: #00c73c;
+  color: #fff;
+  font-size: 12px;
+  text-align: center; }
+
+.layer_area {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .layer_area:before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: ''; }
+
+.layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center; }
+  .layer button {
+    background-color: #00c73c;
+    color: #fff;
+    margin-right: 2px; }
+
+input, textarea {
+  display: block;
+  width: 200px;
+  margin: 0 auto 10px; }
+
+/*# sourceMappingURL=style.css.map */

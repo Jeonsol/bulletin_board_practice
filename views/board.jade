@@ -1,0 +1,49 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        link(rel='stylesheet' href="/stylesheets/style.css")
+    body
+        h1= title
+        table
+            caption(class="blind") 게시판
+            colgroup
+                col(width="10%")
+                col(width="35%")
+                col(width="10%")
+                col(width="35%")
+                col(width="10%")
+            thead
+                th(scope="col") No.
+                th(scope="col") Title
+                th(scope="col") Writer
+                th(scope="col") Date
+                th(scope="col") Count
+            tbody
+                if contents.length > 0
+                    -for(var i = 0; i < contents.length; i++)
+                        tr
+                            td= i
+                            td= contents[i].title
+                            td= contents[i].writer
+                            td= contents[i].date
+                            td= contents[i].count
+                else
+                    tr
+                        td(colspan="5") 게시물이 없습니다.
+
+        a(href="javascript:void(0)" class="new") 새글쓰기
+        div(class="layer_area")
+            div(class="layer")
+                h3  데이터 입력
+                form(action="/boards" method="post")
+                    input(type="text" placeholder="제목" name="addContentSubject")
+                    input(type="text" placeholder="작성자" name="addContentWriter")
+                    input(type="password" placeholder="비밀번호" name="addContentPassword")
+                    textarea(type="password" placeholder="내용" name="addContent")
+                    div(class="button_area")
+                        button(type="submit") SUBMIT
+                        button(type="button" class="close") CANCEL
+
+
+        script(src="/javascripts/index.js")
